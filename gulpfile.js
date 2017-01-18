@@ -1,5 +1,5 @@
 var gulp = require('gulp'); // importamos gulp
-var sass = require('gulp-sass');
+var sass = require('gulp-sass'); // importamos sass
 var notify = require('gulp-notify');
 var browserSync = require('browser-sync').create();
 
@@ -9,8 +9,8 @@ gulp.task("default", ["compile-sass"], function() {
     browserSync.init({
         server: "./"
     });
-    // cuando haya cambios en style.scss, compila sass
-    gulp.watch('./src/scss/style.scss', ['compile-sass']);
+    // cuando haya cambios en archivos scss, compila sass
+    gulp.watch('./src/scss/*.scss', ['compile-sass']);
 
     // cuando se cambie el HTML recarga el navegador
     gulp.watch('./*.html', function() {
