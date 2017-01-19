@@ -7,6 +7,8 @@ $web-header-title-font: $titles-font-family;
 .web-header {
     background: $web-header-background-color;
     padding: 10px;
+    z-index: 100;
+    position: relative;
     .web-title {
         color: $web-header-text-color;
         text-align: center;
